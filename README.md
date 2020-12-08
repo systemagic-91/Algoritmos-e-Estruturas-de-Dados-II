@@ -2,7 +2,7 @@
 
 ## 1.1 Descrição
 
-O repositório foi criado com o objetivo de documentar todo código desenvolvido na disciplina de AED's-II do curso de Ciência da Computação da PUC-MC. Serão abordados os assuntos: 
+O repositório foi criado com o objetivo de documentar todos os códigos desenvolvidos na disciplina de AED's-II do curso de Ciência da Computação da PUC-MC. Serão abordados os assuntos: 
 
 - Tipos abstratos de dados básicos: pilhas, filas, filas de prioridade e conjuntos
 dinâmicos. 

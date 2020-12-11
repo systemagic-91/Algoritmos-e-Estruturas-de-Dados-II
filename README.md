@@ -21,7 +21,6 @@ Como o objetivo da disciplina é aprender sobre o funcionamento das estruturas e
 
 O repositório está dividido em pastas e subpastas, cada pasta tem uma lista de tarefas proposta e em suas respectivas subpastas está a resolução de cada uma das tarefas. 
 
-
 ## 1.3 Status
 
 <p align="center">
@@ -30,18 +29,18 @@ O repositório está dividido em pastas e subpastas, cada pasta tem uma lista de
 
 # 2. Como rodar e testar os codigos
 
+Antes de tentar executar qualquer um dos códigos você deve baixar o [conjunto de dados necessário](), descompactá-lo e copiar para dento da pasta /tmp/ no Linux (caso você use o windows deixo para você a tarefá de pesquisar como fazer rs).
+
+> **ATENÇÃO:** Quando reiniciamos o Linux, ele normalmente apaga os arquivos existentes na pasta /tmp/, então todas as vezes que você ligar o computador novamente precisará copiar a pasta com os dados novamente para pasta /tmp/. Tem como configurar para que a pasta não seja apagada, mas novamente deixo essa pesquisa por sua conta. :blush:
+
 É necessario ter instalado na máquina as Linguagens:
 
 - Java
 - C
 
-Para editar o código é necessario um editor de texto ou IDE de sua preferência. Para testar e rodar bastam alguns comandos no terminal. 
+A execução e teste dos códigos será feita pelo terminal usando redirecionamento de entrada e saída.
 
-Antes de tentar executar qualquer um dos códigos você deve baixar o [conjunto de dados necessário](), descompactá-lo e copiar para dento da pasta /tmp/ no Linux (caso você use o windows deixo para você a tarefá de pesquisar como fazer rs).
-
-> **ATENÇÃO:** Quando reiniciamos o Linux, ele normalmente apaga os arquivos existentes na pasta /tmp/, então todas as vezes que você ligar o computador novamente precisará copiar a pasta com os dados novamente para pasta /tmp/. Tem como configurar para que a pasta não seja apagada, mas novamente deixo essa pesquisa por sua conta. :blush:
-
->Quando cursei a disciplina usei Vim, para editar o código :upside_down_face: e comandos no terminal do Ubuntu para executar e testar o código. Porém, para subir o codigo para o github e fazer quaquer correção vou usar o vscode por questão de praticidade :innocent:.
+>Quando cursei a disciplina usei o Vim para editar o código :upside_down_face: e comandos no terminal do Ubuntu para executar e testar o código. Porém, para subir o codigo para o github e fazer qualquer correção vou usar o vscode por questão de praticidade :innocent:.
 
 ## 2.1 Executando e testando os arquivos .Java:
 

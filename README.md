@@ -1,4 +1,4 @@
-# 1. Algoritmos e Estruturas de Dados
+# 1. Algoritmos e Estruturas de Dados II 
 
 ## 1.1 Descrição
 
@@ -45,9 +45,6 @@ A execução e teste dos códigos será feita pelo terminal usando redirecioname
 ## 2.1 Executando e testando os arquivos .Java:
 
 ## 2.1 Executando e testando os arquivos .C:
-
-## 2.1 Executando e testando os arquivos .py:
-
 
 # 3. Linguagens e ferramentas utilizadas
 

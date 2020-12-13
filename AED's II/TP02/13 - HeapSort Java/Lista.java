@@ -227,33 +227,6 @@ public class Lista {
        }
     }
  
-    // --------------------------------------------------------------- Pesquisa
- 
-    // ---------------------------------- Pesquisa Sequencial
- 
-    /**
-     * Pesquisa sequencialmente um elemento na Lista
-     * @param chave - chave de pesquisa
-     * @return verdadeiro se o elemento existir
-     */
-    public boolean pesquisaSequencial(String chave){
- 
-       comparacoes = 0;
- 
-       boolean resposta = false;
- 
-       for (int i = 0 ; i < n ; i++){
-          
-          comparacoes++;
-          
-          if (lista[i].getNome().compareTo(chave) == 0){
-             resposta = true;
-             i = n;
-          }
-       }
- 
-       return resposta;
-    }
     
     // --------------------------------------------------------------- Ordenacao 
     
@@ -268,67 +241,7 @@ public class Lista {
        lista[j] = lista[i];
        lista[i] = aux;
     }
-     
-    // ---------------------------------- Selection Sort 
-    
-    /**
-     * Ordenacao por Selecao
-     */
-    public void selectionSort(){
  
-       comparacoes = 0;
-       movimentacoes = 0;
- 
-       for (int i = 0 ; i < (n-1) ; i++){
- 
-          int menor = i;
- 
-          for (int j = (i+1) ; j < n ; j++){
- 
-             comparacoes++;
- 
-             if(lista[j].getNome().compareTo(lista[menor].getNome()) < 0){
-                menor = j;
-             }
-          }
- 
-          movimentacoes += 3;
-          swap(menor, i);
-       }
- 
-    }
- 
-    // ---------------------------------- Insertion Sort 
- 
-    /**
-     * Ordenacao por Insercao 
-     */
-    public void insertionSort(){
- 
-       comparacoes = 0;
-       movimentacoes = 0;
- 
-       for (int i = 1 ; i < n ; i++) {
- 
-          Personagem tmp = lista[i];
-          int j = i - 1;
-          
-          while ((j >= 0) && (lista[j].getAnoNascimento().compareTo(tmp.getAnoNascimento()) > 0)){
- 
-             lista[j+1] = lista[j];
-             j--;
- 
-             comparacoes++;
-             movimentacoes++;
-          }
- 
-          comparacoes++;
-          movimentacoes++;
- 
-          lista[j+1] = tmp;
-       }
- 
-    }
  
     // ---------------------------------- Heap Sort 
     

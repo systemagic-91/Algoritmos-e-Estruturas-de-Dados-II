@@ -225,34 +225,6 @@ public class Lista {
           lista[i].imprimir();
        }
     }
- 
-    // --------------------------------------------------------------- Pesquisa
- 
-    // ---------------------------------- Pesquisa Sequencial
- 
-    /**
-     * Pesquisa sequencialmente um elemento na Lista
-     * @param chave - chave de pesquisa
-     * @return verdadeiro se o elemento existir
-     */
-    public boolean pesquisaSequencial(String chave){
- 
-       comparacoes = 0;
- 
-       boolean resposta = false;
- 
-       for (int i = 0 ; i < n ; i++){
-          
-          comparacoes++;
-          
-          if (lista[i].getNome().compareTo(chave) == 0){
-             resposta = true;
-             i = n;
-          }
-       }
- 
-       return resposta;
-    }
     
     // --------------------------------------------------------------- Ordenacao 
     

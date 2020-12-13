@@ -224,77 +224,9 @@ public class Lista {
           lista[i].imprimir();
        }
     }
- 
-    // --------------------------------------------------------------- Pesquisa
- 
-    // ---------------------------------- Pesquisa Sequencial
- 
-    /**
-     * Pesquisa sequencialmente um elemento na Lista
-     * @param chave - chave de pesquisa
-     * @return verdadeiro se o elemento existir
-     */
-    public boolean pesquisaSequencial(String chave){
- 
-       comparacoes = 0;
- 
-       boolean resposta = false;
- 
-       for (int i = 0 ; i < n ; i++){
-          
-          comparacoes++;
-          
-          if (lista[i].getNome().compareTo(chave) == 0){
-             resposta = true;
-             i = n;
-          }
-       }
- 
-       return resposta;
-    }
-    
+
     // --------------------------------------------------------------- Ordenacao 
     
-    /**
-     * Troca elementos da lista de posicao.
-     * @param i - inteiro (indice lista)
-     * @param j - inteiro (indice lista)
-     */
-    private void swap(int i, int j){
- 
-       Personagem aux = lista[j];
-       lista[j] = lista[i];
-       lista[i] = aux;
-    }
-     
-    // ---------------------------------- Selection Sort 
-    
-    /**
-     * Ordenacao por Selecao
-     */
-    public void selectionSort(){
- 
-       comparacoes = 0;
-       movimentacoes = 0;
- 
-       for (int i = 0 ; i < (n-1) ; i++){
- 
-          int menor = i;
- 
-          for (int j = (i+1) ; j < n ; j++){
- 
-             comparacoes++;
- 
-             if(lista[j].getNome().compareTo(lista[menor].getNome()) < 0){
-                menor = j;
-             }
-          }
- 
-          movimentacoes += 3;
-          swap(menor, i);
-       }
- 
-    }
  
     // ---------------------------------- Insertion Sort 
  

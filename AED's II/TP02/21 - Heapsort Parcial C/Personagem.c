@@ -50,30 +50,7 @@ void inserir();
 Personagem remover();
 void mostrar();
 
-bool pesquisaBinaria(char* s);
-
 void swap(int menor, int j);
-void selectionSortRecursivo();
-void selectionSort(int menor, int j);
-void selectionR(int i);
-
-void shellSort();
-void insercaoPorCor(int cor, int h);
-void desempateShell();
-
-void quickS();
-void quickSort(int i, int j);
-void quickSortNome(int esq, int dir);
-void desempateQuick();
-
-void bubbleSort();
-
-void radixSort();
-void radix(int e);
-int getMaiorAltura();
-
-void insertionSortParcial();
-void mostrarParcial(int k);
 
 void heapSortParcial();
 void constroi(int tam);
@@ -329,43 +306,6 @@ void mostrarParcial(int k){
    }
 }
 
-// ------------------------------------ Pesquisa
-
-/**
- * Pesquisa elemento na Lista.
- * @param s - elemento a pesquisar
- * @return verdadeiro se o elemento estiver na Lista
- */
-bool pesquisaBinaria(char* s){
-   
-   comparacoes = 0;
-
-   int esq;
-   int dir;
-   int meio;
-   bool resp = false;
-
-   esq = 0;
-   dir = (n-1);   
-
-   while(esq <= dir){      
-     
-      meio = (esq + dir) / 2;
-
-      comparacoes++;
-      
-      if (strcmp(lista[meio].nome, s) == 0){
-         resp = true;
-         esq = n;
-      } else if (strcmp(lista[meio].nome, s) < 0){
-         esq = meio + 1;
-      } else {
-         dir = meio - 1;
-      }
-   }
-   
-   return resp;
-}
 
 // ------------------------------------ Ordenacao
 
@@ -380,416 +320,6 @@ void swap(int a, int b){
    lista[b] = lista[a];
    lista[a] = tmp;
 }
-
-// ---------------- Selection Sort
-
-/**
- * Chamada da Recursividade.
- */
-void selectionSortRecursivo(){
-
-   comparacoes = 0;
-   movimentacoes = 0;
-   selectionR(0);
-}
-
-
-/**
- * Ordenacao por Selecao Recursiva.
- */
-void selectionR(int i){
-
-   if(i > (n-1)){
-
-      i = i;
-
-   } else {
-
-      selectionR(i + 1);
-      selectionSort(i, i + 1);
-   }
-}
-
-
-/**
- * Busca a posicao do menor elemento em um array.
- * @param menor - inteiro indice menor elemento
- * @param j - indice inteiro prox elemento
- */
-void selectionSort(int menor, int j){
-
-   int pMenor = menor;
-
-   if (j > (n - 1)) {
-
-      pMenor = pMenor;
-
-   } else {
-
-      comparacoes++;
-      if(strcmp(lista[j].nome, lista[pMenor].nome) < 0){
-
-         movimentacoes += 3;
-         swap(pMenor, j);
-      }
-
-      selectionSort(pMenor, (j + 1));
-   }
-
-}
-
-// ---------------- Shellsort
-
-/**
- * Ordenacao por ShellSort.
- */
-void shellSort(){
-
-   movimentacoes = 0;
-   comparacoes = 0;
-
-   int h = 1;
-
-   do{
-      
-      h = (h * 3) + 1;
-
-   }while(h < n);
-
-   do{
-
-      h /= 3;
-
-      for(int cor = 0 ; cor < n ; cor++){
-         insercaoPorCor(cor, h);
-      }
-
-   }while(h != 1);
-}
-
-/**
- * Insertion Sort por Cor.
- * @param cor - numero da cor.
- * @param h - passo h
- */ 
-void insercaoPorCor(int cor, int h){
-
-   for( int i = (h + cor) ; i <  n ; i += h){
-
-      Personagem tmp = lista[i];
-      int j = i - h;
-
-      comparacoes++;
-      while((j >= 0) && (lista[j].peso > tmp.peso)){
-
-         comparacoes++;
-         movimentacoes++;
-
-         lista[j + h] = lista [j];
-         j -= h;
-      }
-
-      movimentacoes++;
-      lista[j + h] = tmp;
-   }
-}
-
-/**
- * desempate do shellsort (chave nome).
- */
-void desempateshell(){
-
-   int inicio = 0;
-   int termino = 0;
-   int i = 0;
-   int j = 0;
-
-   while(i < n){
-
-      if(lista[i].peso == lista[i+1].peso){
-
-         j = i;
-         inicio = i;
-         termino = inicio;
-         
-         while (lista[j].peso == lista[j+1].peso){
-            termino++;
-            j++;
-         }
-
-         quickSortNome(inicio, termino);
-         i = j;
-      }
-
-      i++;      
-   }
-}
-
-// ---------------- Quicksort
-
-/**
- * Chamada do Quicksort.
- */
-void quickS(){
-
-   comparacoes = 0;
-   movimentacoes = 0;
-   quickSort(0, (n - 1));
-}
-
-
-/**
- * Ordenacao por Quicksort. (Chave de Ordenacao Cor do Cabelo).
- * @param esq - inicio vetor
- * @param dir - final  vetor
- */
-void quickSort(int esq, int dir){
-
-   int i = esq;
-   int j = dir;
-
-   Personagem pivo = lista[(dir+esq)/2];
-
-   while(i <= j){
-
-      while(strcmp(lista[i].corCabelo, pivo.corCabelo) < 0){
-
-         comparacoes++;
-         i++;
-      }
-
-      while(strcmp(lista[j].corCabelo, pivo.corCabelo) > 0){
-
-         comparacoes++;
-         j--;
-      }
-
-      if(i <= j){
-
-         movimentacoes += 3;
-         swap(i, j);
-         i++;
-         j--;
-      }
-   }
-
-   if(esq < j){
-      quickSort(esq, j);
-   }
-
-   if(i < dir){
-      quickSort(i, dir);
-   }
-}
-
-
-/**
- * Ordenacao por Quicksort. (Chave de Ordenacao Nome).
- * @param esq - inicio vetor
- * @param dir - final  vetor
- */
-void quickSortNome(int esq, int dir){
-
-   int i = esq;
-   int j = dir;
-
-   Personagem pivo = lista[(dir+esq)/2];
-
-   while(i <= j){
-
-      while(strcmp(lista[i].nome, pivo.nome) < 0){
-
-         comparacoes++;
-         i++;
-      }
-
-      while(strcmp(lista[j].nome, pivo.nome) > 0){
-
-         comparacoes++;
-         j--;
-      }
-
-      if(i <= j){
-
-         movimentacoes += 3;
-         swap(i, j);
-         i++;
-         j--;
-      }
-   }
-
-   if(esq < j){
-      quickSortNome(esq, j);
-   }
-
-   if(i < dir){
-      quickSortNome(i, dir);
-   }
-}
-
-/**
- * Desempate do quickSort corCabelo.
- */
-void desempateQuick(){
-
-   int inicio = 0;
-   int termino = 0;
-   int i = 0;
-   int j = 0;
-
-   while(i < n){
-
-      if(strcmp(lista[i].corCabelo, lista[i+1].corCabelo) == 0){
-
-         j = i;
-         inicio = i;
-         termino = inicio;
-         
-         while ((strcmp(lista[j].corCabelo, lista[j+1].corCabelo) == 0)){
-            termino++;
-            j++;
-         }
-
-         quickSortNome(inicio, termino);
-         i = j;
-      }
-
-      i++;
-   }
-}
-
-// ---------------- Bubblesort
-
-/**
- * Ordenacao por BubbleSort
- */
-void bubbleSort(){
-
-   comparacoes = 0;
-   movimentacoes = 0;
-
-   for(int i = (n - 1) ; i > 0 ; i--){
-
-      for(int j = 0 ; j < i ; j++){
-
-         comparacoes++;
-
-         if(strcmp(lista[j].anoNascimento, lista[j + 1].anoNascimento) > 0){
-
-            movimentacoes += 3;
-
-            swap(j, (j+1));
-         }
-      }
-   }
-}
-
-// ---------------- Radixsort
-
-/**
- * Ordenacao por Radixsort.
- */
-void radixSort(){
-
-   comparacoes = 0;
-   movimentacoes = 0;
-
-   int maior = getMaiorAltura();
-
-   for(int e = 1 ; (maior / e) > 0 ; e *= 10){
-      radix(e);
-   }
-}
-
-/**
- * Ordenacao por radix.
- * @param e - inteiro
- */
-void radix(int e){
-
-   int i;
-   int cont[10];
-   Personagem saida[n];
-
-   for(int i = 0 ; i < 10 ; i++){
-      cont[i] = 0;
-   }
-   
-   for(i = 0 ; i < n ; i++){
-      cont[(lista[i].altura / e) % 10]++;
-   }
-
-   for(i = 1 ; i < 10 ; i++){
-      cont[i] += cont[i - 1]; 
-   }
-
-   for(i = (n - 1) ; i >= 0 ; i--){
-      saida[cont[(lista[i].altura / e) % 10] - 1] = lista[i];
-      cont[(lista[i].altura / e) % 10]--;
-   }
-
-   for(i = 0 ; i < n ; i++){
-
-      movimentacoes++;
-
-      lista[i] = saida[i];
-   }
-}
-
-/**
- * Retorna maior altura da lista de personagens
- * @return inteiro.
- */
-int getMaiorAltura(){
-
-   int maior = lista[0].altura;
-
-   for(int i = 0 ; i < n ; i++){
-
-      comparacoes++;
-      if(lista[i].altura > maior){
-         maior = lista[i].altura;
-      }
-   }
-
-   return maior;
-}
-
-
-// ---------------- Insertion Sort Parcial
-
-void insertionSortParcial(){
-
-   comparacoes = 0;
-   movimentacoes = 0;
-
-   for (int i = 1 ; i < n ; i++) {
-
-      Personagem tmp = lista[i];
-      int j;
-
-      if(i > k){
-         j = k;
-      } else {
-         j = i - 1;
-      }
-
-      while ((j >= 0) && strcmp(lista[j].anoNascimento, tmp.anoNascimento) > 0){
-
-         lista[j + 1] = lista[j];
-         j--;
-
-         comparacoes++;
-         movimentacoes++;
-      }
-
-      comparacoes++;
-      movimentacoes++;
-
-      lista[j + 1] = tmp;
-   }   
-
-} 
 
 // ---------------- Heapsort Parcial
 
@@ -932,6 +462,51 @@ void desempateHeap(){
       i++;
    }
 }
+
+/**
+ * Ordenacao por Quicksort. (Chave de Ordenacao Nome).
+ * @param esq - inicio vetor
+ * @param dir - final  vetor
+ */
+void quickSortNome(int esq, int dir){
+
+   int i = esq;
+   int j = dir;
+
+   Personagem pivo = lista[(dir+esq)/2];
+
+   while(i <= j){
+
+      while(strcmp(lista[i].nome, pivo.nome) < 0){
+
+         comparacoes++;
+         i++;
+      }
+
+      while(strcmp(lista[j].nome, pivo.nome) > 0){
+
+         comparacoes++;
+         j--;
+      }
+
+      if(i <= j){
+
+         movimentacoes += 3;
+         swap(i, j);
+         i++;
+         j--;
+      }
+   }
+
+   if(esq < j){
+      quickSortNome(esq, j);
+   }
+
+   if(i < dir){
+      quickSortNome(i, dir);
+   }
+}
+
 
 // ------------------------------------ tarefa
 

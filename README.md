@@ -13,7 +13,7 @@ dinâmicos.
 
 - Fundamentos de análise de algoritmos: complexidades, notação O e análise de melhor e pior casos para algoritmos iterativos.
 
-Como o objetivo da disciplina é aprender sobre o funcionamento das estruturas e dos algoritmos evitamos ao máximo o uso dos recursos facilitadores __(exemplo das Collections em Java)__ já embutidos em algumas das linguagens.
+Como o objetivo da disciplina é aprender sobre o funcionamento das estruturas e dos algoritmos evitamos ao máximo o uso dos recursos facilitadores _(exemplo das Collections em Java)_ já embutidos em algumas das linguagens.
 
 
 ## 1.2 Organização
@@ -28,7 +28,7 @@ O repositório está dividido em pastas e subpastas, cada pasta tem uma lista de
 
 # 2. Como rodar e testar os codigos
 
-Antes de tentar executar qualquer um dos códigos você deve baixar o [conjunto de dados necessário](), descompactá-lo e copiar para dento da pasta /tmp/ no Linux (caso você use o windows deixo para você a tarefá de pesquisar como fazer rs).
+Antes de tentar executar qualquer um dos códigos você deve baixar o [conjunto de dados necessário](https://github.com/yoruichi-sama/Algoritmos-e-Estruturas-de-Dados/tree/main/Conjunto%20de%20Dados), descompactá-lo e copiar para dento da pasta /tmp/ no Linux (caso você use o windows deixo para você a tarefa de pesquisar como fazer rs).
 
 > **ATENÇÃO:** Quando reiniciamos o Linux, ele normalmente apaga os arquivos existentes na pasta /tmp/, então todas as vezes que você ligar o computador novamente precisará copiar a pasta com os dados novamente para pasta /tmp/. Tem como configurar para que a pasta não seja apagada, mas novamente deixo essa pesquisa por sua conta. :blush:
 
@@ -37,7 +37,7 @@ Antes de tentar executar qualquer um dos códigos você deve baixar o [conjunto 
 - Java
 - C
 
-A execução e teste dos códigos será feita pelo terminal usando redirecionamento de entrada e saída.
+A execução e teste dos códigos pode ser feita pelo terminal usando redirecionamento de entrada e saída.
 
 >Quando cursei a disciplina usei o Vim para editar o código :upside_down_face: e comandos no terminal do Ubuntu para executar e testar o código. Porém, para subir o codigo para o github e fazer qualquer correção vou usar o vscode por questão de praticidade :innocent:.
 

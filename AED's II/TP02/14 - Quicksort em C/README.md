@@ -68,3 +68,10 @@ void quickSort(int esq, int dir){
    }
 }
 ```
+## Complexidade
+
+- Melhor caso: `T(n) = n * lg(n)` 
+- Pior caso: `T(n) = n^2`
+- Caso médio: `T(n) = n * lg(n)` 
+
+_O algoritmo de ordenação Quick Sort é O(n * lg(n))_

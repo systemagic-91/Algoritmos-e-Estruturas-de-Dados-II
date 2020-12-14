@@ -51,3 +51,11 @@ void insercaoPorCor(int cor, int h){
    }
 }
 ```
+
+## Complexidade
+
+- Melhor caso: `T(n) = n * lg(n)` _(Melhor conhecida)_
+- Pior caso: `T(n) = n * lg(n)`
+- Caso médio: `T(n) = depende` 
+
+_Sua análise contém alguns problemas matemáticos difíceis, a começar pela própria sequência de incrementos. A complexidade do algoritmo ainda não é conhecida._

@@ -22,3 +22,11 @@ public void insertionSort(){
 
 }
 ```
+
+## Complexidade
+
+- Melhor caso: `T(n) = n` 
+- Pior caso: `T(n) = n^2`
+- Caso médio: `T(n) = n^2` 
+
+_O algoritmo de ordenação Insertion Sort é O(n^2)_

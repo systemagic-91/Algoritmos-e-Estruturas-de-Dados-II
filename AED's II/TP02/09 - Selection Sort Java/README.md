@@ -36,3 +36,11 @@ public void selectionSort(){
 
 }
 ```
+
+## Complexidade
+
+- Melhor caso: `T(n) = n^2` 
+- Pior caso: `T(n) = n^2`
+- Caso médio: `T(n) = n^2` 
+
+_O algoritmo de ordenação Selection Sort é O(n^2)_

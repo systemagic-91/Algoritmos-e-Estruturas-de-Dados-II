@@ -88,3 +88,11 @@ private int getMaiorFilho(int i, int tam){
     return maior;
 }
 ```
+
+## Complexidade
+
+- Melhor caso: `T(n) = n * lg(n)` 
+- Pior caso: `T(n) = n * lg(n)`
+- Caso médio: `T(n) = n * lg(n)` 
+
+_O algoritmo de ordenação Heap Sort é O(n * lg(n))_

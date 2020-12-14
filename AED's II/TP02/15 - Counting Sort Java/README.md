@@ -47,3 +47,11 @@ private int getMaiorPeso(){
     return maior;
 }
 ```
+
+## Complexidade
+
+- Melhor caso: `T(n) = n ` 
+- Pior caso: `T(n) = n`
+- Caso médio: `T(n) = n` 
+
+_O algoritmo de ordenação Counting Sort é O(n)_

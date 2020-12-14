@@ -21,3 +21,11 @@ public boolean pesquisaSequencial(String chave){
     return resposta;
 }
 ```
+
+## Complexidade
+
+- Melhor caso: `T(n) = 1` 
+- Pior caso: `T(n) = n`
+- Caso médio: `T(n) = (n+1)/2`
+
+_O algoritmo de pesquisa sequencial é O(n)_

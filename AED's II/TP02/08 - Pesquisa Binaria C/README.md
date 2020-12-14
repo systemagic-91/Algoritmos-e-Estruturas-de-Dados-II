@@ -33,3 +33,10 @@ bool pesquisaBinaria(char* s){
    return resp;
 }
 ```
+## Complexidade
+
+- Melhor caso: `T(n) = 1` 
+- Pior caso: `T(n) = lg(n)`
+- Caso médio: `T(n) = (lg(n)+1)/2`
+
+_O algoritmo de pesquisa binária é O(lg(n))_

@@ -83,3 +83,11 @@ public void merge(int esq, int meio, int dir){
     }      
 }
 ```
+
+## Complexidade
+
+- Melhor caso: `T(n) = n * lg(n)` 
+- Pior caso: `T(n) = n * lg(n)`
+- Caso médio: `T(n) = n * lg(n)` 
+
+_O algoritmo de ordenação Merge Sort é O(n * lg(n))_

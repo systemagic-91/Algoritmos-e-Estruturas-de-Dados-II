@@ -68,3 +68,7 @@ int getMaiorAltura(){
 }
 
 ```
+
+## Complexidade
+
+_O algoritmo de ordenação Radix Sort é O(n * k) onde n é o número de elementos e k é o tamanho médio das chaves._

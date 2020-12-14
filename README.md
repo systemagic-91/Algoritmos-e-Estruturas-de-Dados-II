@@ -11,8 +11,7 @@ dinâmicos.
 
 - Ordenação e pesquisa em memória principal. 
 
-- Fundamentos de análise de algoritmos: estimativa do tempo de processamento, complexidades de tempo e espaço,
-soluções de compromisso, funções de custo, notação O e análise de melhor e pior casos para algoritmos iterativos.
+- Fundamentos de análise de algoritmos: complexidades, notação O e análise de melhor e pior casos para algoritmos iterativos.
 
 Como o objetivo da disciplina é aprender sobre o funcionamento das estruturas e dos algoritmos evitamos ao máximo o uso dos recursos facilitadores __(exemplo das Collections em Java)__ já embutidos em algumas das linguagens.
 

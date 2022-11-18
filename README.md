@@ -16,6 +16,8 @@ dinâmicos.
 Como o objetivo da disciplina é aprender sobre o funcionamento das estruturas e dos algoritmos evitamos ao máximo o uso dos recursos facilitadores _(exemplo das Collections em Java)_ já embutidos em algumas das linguagens.
 
 
+
+
 ## 1.2 Organização
 
 O repositório está dividido em pastas e subpastas, cada pasta tem uma lista de tarefas proposta e em suas respectivas subpastas está a resolução de cada uma das tarefas. 
